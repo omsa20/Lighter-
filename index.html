@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnomaSwap - The Intent-Centric Financial Nexus</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for a clean, professional feel */
+        body {
+            background-color: #f7f7f7;
+            color: #333;
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+        .section-bg {
+            background-color: #ffffff;
+            border: 1px solid #e5e5e5;
+        }
+        .form-input {
+            background-color: #f7f7f7;
+            border: 1px solid #b3b3b3;
+            color: #333;
+        }
+        .btn-magic {
+            background-color: #e02424;
+            color: #ffffff;
+            transition: all 0.3s ease;
+        }
+        .btn-magic:hover {
+            background-color: #b91c1c;
+            transform: scale(1.05);
+        }
+        .intent-item {
+            border-bottom: 1px solid #e02424;
+        }
+        .sticky-nav {
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+        }
+        .spell-item {
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+        .spell-item:hover {
+            background-color: #f0f0f0;
+        }
+        .spell-description {
+            display: none;
+        }
+        .spell-item.active .spell-description {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="sticky-nav sticky top-0 z-50 p-6 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold text-e02424">AnomaSwap</h1>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#dex" class="text-lg font-medium text-gray-700 hover:text-e02424 transition-colors duration-300">DEX Transmutation</a></li>
+                    <li><a href="#farming" class="text-lg font-medium text-gray-700 hover:text-e02424 transition-colors duration-300">Yield Farming Mana Infusion</a></li>
+                    <li><a href="#nfts" class="text-lg font-medium text-gray-700 hover:text-e02424 transition-colors duration-300">NFT Artifact Hunter</a></li>
+                    <li><a href="#spellbook" class="text-lg font-medium text-gray-700 hover:text-e02424 transition-colors duration-300">The Anoma Spellbook</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto mt-10 p-6">
+
+        <section id="dex" class="section-bg rounded-lg shadow-lg p-8 mb-10">
+            <h2 class="text-4xl font-extrabold text-e02424 mb-4">DEX Transmutation</h2>
+            <p class="text-lg text-gray-600 mb-6">Transmute one token into another with the power of intent-centric magic. Describe your desired outcome, and our sorcerers will find the most efficient path.</p>
+            <form id="dexForm" class="space-y-4">
+                <div>
+                    <label for="dexTokenA" class="block text-sm font-medium text-red-600">Token to Transmute (e.g., ETH, USDC)</label>
+                    <input type="text" id="dexTokenA" name="tokenA" class="form-input mt-1 block w-full rounded-md shadow-sm p-3" placeholder="ETH" required>
+                </div>
+                <div>
+                    <label for="dexAmount" class="block text-sm font-medium text-red-600">Amount</label>
+                    <input type="number" id="dexAmount" name="amount" class="form-input mt-1 block w-full rounded-md shadow-sm p-3" placeholder="10" required>
+                </div>
+                <div>
+                    <label for="dexTokenB" class="block text-sm font-medium text-red-600">Desired Token (e.g., DAI, ANOMA)</label>
+                    <input type="text" id="dexTokenB" name="tokenB" class="form-input mt-1 block w-full rounded-md shadow-sm p-3" placeholder="ANOMA" required>
+                </div>
+                <button type="submit" class="btn-magic w-full py-3 px-4 rounded-md font-bold text-lg">Submit Transmutation Intent</button>
+            </form>
+        </section>
+
+        <section id="farming" class="section-bg rounded-lg shadow-lg p-8 mb-10">
+            <h2 class="text-4xl font-extrabold text-e02424 mb-4">Yield Farming Mana Infusion</h2>
+            <p class="text-lg text-gray-600 mb-6">Deposit your tokens to infuse the liquidity pools with your mana and earn a share of the magical rewards.</p>
+            <form id="farmingForm" class="space-y-4">
+                <div>
+                    <label for="farmingToken" class="block text-sm font-medium text-red-600">Token to Deposit (e.g., ETH/DAI LP)</label>
+                    <input type="text" id="farmingToken" name="token" class="form-input mt-1 block w-full rounded-md shadow-sm p-3" placeholder="ETH/DAI LP" required>
+                </div>
+                <div>
+                    <label for="farmingAmount" class="block text-sm font-medium text-red-600">Amount</label>
+                    <input type="number" id="farmingAmount" name="amount" class="form-input mt-1 block w-full rounded-md shadow-sm p-3" placeholder="5" required>
+                </div>
+                <div>
+                    <label for="farmingStrategy" class="block text-sm font-medium text-red-600">Mana Infusion Strategy</label>
+                    <select id="farmingStrategy" name="strategy" class="form-input mt-1 block w-full rounded-md shadow-sm p-3">
+                        <option value="low">Low Risk (Stable Infusion)</option>
+                        <option value="medium">Medium Risk (Balanced Growth)</option>
+                        <option value="high">High Risk (Maximum Mana Surge)</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-magic w-full py-3 px-4 rounded-md font-bold text-lg">Submit Infusion Intent</button>
+            </form>
+        </section>
+
+        <section id="nfts" class="section-bg rounded-lg shadow-lg p-8 mb-10">
+            <h2 class="text-4xl font-extrabold text-e02424 mb-4">NFT Artifact Hunter</h2>
+            <p class="text-lg text-gray-600 mb-6">Track and hunt for rare magical artifacts (NFTs) across the blockchain realms. Find the one that resonates with your spirit.</p>
+            <form id="nftForm" class="space-y-4">
+                <div>
+                    <label for="nftCollection" class="block text-sm font-medium text-red-600">Artifact Collection (e.g., Cryptogems)</label>
+                    <input type="text" id="nftCollection" name="collection" class="form-input mt-1 block w-full rounded-md shadow-sm p-3" placeholder="Cryptogems" required>
+                </div>
+                <div>
+                    <label for="nftPrice" class="block text-sm font-medium text-red-600">Maximum Price (in ETH)</label>
+                    <input type="number" id="nftPrice" name="price" class="form-input mt-1 block w-full rounded-md shadow-sm p-3" placeholder="0.5" required>
+                </div>
+                <div>
+                    <label for="nftFeatures" class="block text-sm font-medium text-red-600">Desired Features (e.g., Red Aura, Dragon Scales)</label>
+                    <textarea id="nftFeatures" name="features" rows="3" class="form-input mt-1 block w-full rounded-md shadow-sm p-3" placeholder="Red Aura, Dragon Scales"></textarea>
+                </div>
+                <button type="submit" class="btn-magic w-full py-3 px-4 rounded-md font-bold text-lg">Submit Artifact Hunter Intent</button>
+            </form>
+        </section>
+        
+        <section id="liveFeed" class="section-bg rounded-lg shadow-lg p-8 mb-10">
+            <h2 class="text-4xl font-extrabold text-e02424 mb-6 text-center">Live Intents Feed</h2>
+            <div id="feedList" class="space-y-4">
+                <div class="intent-item p-4 rounded-md text-sm text-gray-500">
+                    <p class="font-bold text-gray-600">Initial Intent:</p>
+                    <p>A mage has transmuted 50 USDC for ANOMA.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="vision" class="p-8 mb-10 text-center">
+            <h2 class="text-4xl font-extrabold text-e02424 mb-10">The Vision: A New Era of Magical Finance</h2>
+            <div class="flex justify-center mb-8">
+                <img src="https://via.placeholder.com/200x250/B22222/FFFFFF?text=Red+Robed+Mage" alt="Red-robed mage with a red hat" class="rounded-lg shadow-lg">
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-left">
+                <div class="section-bg p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-2xl font-bold text-red-600 mb-2">Enhanced User Experience</h3>
+                    <p class="text-sm text-gray-600">Simplify complex tasks. Instead of manual steps, just state your goal (your "intent"), and the system handles the rest. Effortless magic.</p>
+                </div>
+                <div class="section-bg p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-2xl font-bold text-red-600 mb-2">Increased Efficiency</h3>
+                    <p class="text-sm text-gray-600">Our magical network finds the optimal path for your intent, reducing transaction costs and saving you precious mana (and gas fees).</p>
+                </div>
+                <div class="section-bg p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-2xl font-bold text-red-600 mb-2">User Empowerment</h3>
+                    <p class="text-sm text-gray-600">You are in control. Define your intent with specific constraints (e.g., price limits, deadlines), ensuring the outcome aligns perfectly with your will.</p>
+                </div>
+                <div class="section-bg p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-2xl font-bold text-red-600 mb-2">Automated Actions</h3>
+                    <p class="text-sm text-gray-600">Set it and forget it. Our enchanted system can automatically execute actions when certain conditions are met, from hunting artifacts to harvesting yields.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="spellbook" class="section-bg rounded-lg shadow-lg p-8 mb-10 relative">
+            <h2 class="text-4xl font-extrabold text-e02424 mb-4">The Anoma Spellbook</h2>
+            <img src="https://via.placeholder.com/100/B22222/FFFFFF?text=Wizard" alt="A red-robed wizard" class="absolute top-4 right-4 h-24 w-24 object-cover rounded-full shadow-lg border-2 border-red-600">
+            
+            <p class="text-lg text-gray-600 mb-6">A repository of magical knowledge. Search for a term to reveal its mystical meaning and unravel the secrets of the Web3 realm.</p>
+            
+            <div class="mb-6">
+                <input type="text" id="spellSearch" class="form-input w-full rounded-md p-3" placeholder="Search for a spell (e.g., 'Gas', 'NFT', 'Oracle')...">
+            </div>
+
+            <div id="spellList" class="space-y-4">
+                </div>
+        </section>
+
+    </main>
+    
+    <footer class="p-6 text-center text-sm text-gray-500 space-y-2">
+        <p>&copy; 2024 AnomaSwap. All Rights Reserved. The magic is in the intent.</p>
+        <p class="text-xs text-gray-400">Powered by Anoma | Made by Om P</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const feedList = document.getElementById('feedList');
+
+            // --- Intent Submission Handlers ---
+            const addIntentToFeed = (intentText) => {
+                const newIntent = document.createElement('div');
+                newIntent.className = 'intent-item p-4 rounded-md text-sm text-gray-500';
+                newIntent.innerHTML = `<p class="font-bold text-gray-600">New Intent:</p><p>${intentText}</p>`;
+                feedList.prepend(newIntent); // Add to the top of the feed
+            };
+
+            document.getElementById('dexForm').addEventListener('submit', (e) => {
+                e.preventDefault();
+                const form = e.target;
+                const tokenA = form.tokenA.value;
+                const amount = form.amount.value;
+                const tokenB = form.tokenB.value;
+                addIntentToFeed(`Transmute ${amount} ${tokenA.toUpperCase()} for ${tokenB.toUpperCase()}.`);
+                form.reset();
+            });
+
+            document.getElementById('farmingForm').addEventListener('submit', (e) => {
+                e.preventDefault();
+                const form = e.target;
+                const token = form.token.value;
+                const amount = form.amount.value;
+                const strategy = form.strategy.options[form.strategy.selectedIndex].text;
+                addIntentToFeed(`Infuse ${amount} of ${token.toUpperCase()} into a pool using a ${strategy} strategy.`);
+                form.reset();
+            });
+
+            document.getElementById('nftForm').addEventListener('submit', (e) => {
+                e.preventDefault();
+                const form = e.target;
+                const collection = form.collection.value;
+                const price = form.price.value;
+                const features = form.features.value || 'any features';
+                addIntentToFeed(`Hunt for an artifact in the ${collection} collection for max ${price} ETH with ${features}.`);
+                form.reset();
+            });
+
+            // --- Anoma Spellbook Knowledge Base ---
+            const spells = [
+                {
+                    term: "Gas",
+                    description: "In the Web3 realm, **Gas** is the mana required to cast spells (transactions). Each spell's complexity consumes a different amount of mana, which mages pay to the magical miners who validate the transactions. Higher mana costs mean more complex spells or a more crowded aether."
+                },
+                {
+                    term: "Zero-Knowledge Proof (ZKP)",
+                    description: "A **Zero-Knowledge Proof** is a spell that allows one mage to prove they know a secret without revealing the secret itself. It's like proving you have the key to a magical lock without ever showing the key or letting the other mage see you use it. This preserves privacy and trust in the grand tapestry of the blockchain."
+                },
+                {
+                    term: "Liquidity Pool",
+                    description: "A **Liquidity Pool** is a shimmering cauldron filled with paired tokens. Mages contribute their tokens to this cauldron to earn rewards, much like farmers planting seeds to harvest mana. These pools are the lifeblood of decentralized exchanges, allowing for smooth and effortless transmutation spells."
+                },
+                {
+                    term: "NFT",
+                    description: "An **NFT**, or Non-Fungible Token, is a unique, magical artifact. Unlike common coins, each NFT holds its own distinct magical essence and history. It can be a piece of digital art, a deed to a magical land, or a rare enchanted beast, and its ownership is forever recorded on the blockchain ledger."
+                },
+                {
+                    term: "Smart Contract",
+                    description: "A **Smart Contract** is a self-executing pact inscribed with ancient runes onto the blockchain. It automatically enforces the terms of an agreement without a central authority, ensuring that the spell will only trigger when its pre-written conditions are met."
+                },
+                {
+                    term: "Decentralized Autonomous Organization (DAO)",
+                    description: "A **DAO** is a coven of mages united by a set of codified rules. Instead of a single leader, the decisions of the coven are made collectively through a vote, where each mage's voice (or token) holds magical weight. This allows them to govern themselves and their shared treasures without any single authority."
+                },
+                {
+                    term: "Oracle",
+                    description: "An **Oracle** is a mystical seer that brings information from the outside world into the blockchain realm. Because the blockchain cannot see events in the physical world (like stock prices or weather), it relies on these oracles to feed it a stream of trusted, real-world data."
+                },
+                {
+                    term: "Layer 2",
+                    description: "A **Layer 2** is a magical pocket dimension built atop a main blockchain (Layer 1) to perform spells more quickly and cheaply. Instead of casting every small spell on the main chain, mages perform their actions in the Layer 2, and then a summary of the outcomes is sent back to the main chain, conserving precious mana."
+                }
+            ];
+
+            const spellList = document.getElementById('spellList');
+            const spellSearch = document.getElementById('spellSearch');
+
+            const renderSpells = (searchTerm = '') => {
+                spellList.innerHTML = ''; // Clear previous results
+                const filteredSpells = spells.filter(spell => 
+                    spell.term.toLowerCase().includes(searchTerm.toLowerCase())
+                );
+
+                if (filteredSpells.length === 0) {
+                    spellList.innerHTML = `<p class="text-center text-gray-500">No spells found with that name. Try a different incantation.</p>`;
+                    return;
+                }
+
+                filteredSpells.forEach(spell => {
+                    const spellItem = document.createElement('div');
+                    spellItem.className = 'spell-item p-4 rounded-md border border-red-600';
+                    spellItem.innerHTML = `
+                        <h3 class="text-lg font-bold text-red-600">${spell.term}</h3>
+                        <div class="spell-description mt-2 text-sm text-gray-600">
+                            <p>${spell.description}</p>
+                        </div>
+                    `;
+                    spellItem.addEventListener('click', () => {
+                        spellItem.classList.toggle('active');
+                    });
+                    spellList.appendChild(spellItem);
+                });
+            };
+
+            // Initial render
+            renderSpells();
+
+            // Search event listener
+            spellSearch.addEventListener('input', (e) => {
+                renderSpells(e.target.value);
+            });
+        });
+    </script>
+
+</body>
+</html>
